@@ -12,6 +12,7 @@
   --shiki-lsif-popup-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
   --shiki-lsif-docs-color: #000;
   --shiki-lsif-docs-font: sans-serif;
+  --shiki-lsif-code-font: monospace;
 }
 
 .shiki .line {
@@ -31,6 +32,10 @@
   .shiki-lsif * {
     transition: none !important;
   }
+}
+
+.shiki-lsif code {
+  font-family: var(--shiki-lsif-code-font);
 }
 
 .shiki-lsif .shiki-lsif-hover {
@@ -132,6 +137,30 @@
   text-align: right;
   color: #6e7681;
 }
+
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/inter-v18-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-mono-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/roboto-mono-v23-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+  --shiki-lsif-docs-font: "Inter", sans-serif;
+  --shiki-lsif-code-font: "Roboto Mono", monospace;
+}
+
 </style>
 </head>
 <body>
