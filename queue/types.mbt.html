@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>types.mbt</title>
+  <style>/* ===== Basic ===== */
+:root {
+  --shiki-lsif-border-color: #c2c2c4;
+  --shiki-lsif-popup-bg: #fff;
+  --shiki-lsif-popup-color: inherit;
+  --shiki-lsif-popup-shadow: rgba(0, 0, 0, 0.08) 0px 1px 4px;
+  --shiki-lsif-docs-color: #000;
+  --shiki-lsif-docs-font: sans-serif;
+}
+
+.shiki .line {
+  font-size: 14px;
+}
+
+.shiki .line:has(.line-number:target) {
+  background-color: rgb(254, 251, 223);
+}
+
+.shiki-lsif {
+  line-height: 1.5em;
+}
+
+/* Respect people's wishes to not have animations */
+@media (prefers-reduced-motion: reduce) {
+  .shiki-lsif * {
+    transition: none !important;
+  }
+}
+
+.shiki-lsif .shiki-lsif-hover {
+  border-bottom: 1px solid var(--shiki-lsif-border-color);
+  position: relative;
+}
+
+.shiki-lsif .shiki-lsif-hover:hover {
+  border-bottom: none;
+  background-color: rgb(244, 249, 254);
+}
+
+.shiki-lsif .shiki-lsif-hover-contents {
+  position: absolute;
+  display: none;
+  background: var(--shiki-lsif-popup-bg);
+  left: 0;
+  top: 1.2em;
+  color: var(--shiki-lsif-popup-color);
+  border: 1px solid var(--shiki-lsif-border-color);
+  border-radius: 4px;
+  pointer-events: auto;
+  z-index: 10;
+  user-select: text;
+  text-align: left;
+  box-shadow: var(--shiki-lsif-popup-shadow);
+  max-width: 500px;
+  width: max-content;
+  white-space: normal;
+  padding: 6px 8px;
+  font-family: var(--shiki-lsif-docs-font);
+  color: var(--shiki-lsif-docs-color);
+  line-height: 1.5;
+}
+
+.shiki-lsif .shiki-lsif-hover:hover .shiki-lsif-hover-contents {
+  display: block;
+}
+
+/* markup style */
+
+.shiki-lsif .shiki-lsif-hover-contents p,
+.shiki-lsif .shiki-lsif-hover-contents pre,
+.shiki-lsif .shiki-lsif-hover-contents ul,
+.shiki-lsif .shiki-lsif-hover-contents h1,
+.shiki-lsif .shiki-lsif-hover-contents h2,
+.shiki-lsif .shiki-lsif-hover-contents h3,
+.shiki-lsif .shiki-lsif-hover-contents h4,
+.shiki-lsif .shiki-lsif-hover-contents h5,
+.shiki-lsif .shiki-lsif-hover-contents h6 {
+  margin: 8px 0;
+}
+
+.shiki-lsif .shiki-lsif-hover-contents h1,
+.shiki-lsif .shiki-lsif-hover-contents h2,
+.shiki-lsif .shiki-lsif-hover-contents h3,
+.shiki-lsif .shiki-lsif-hover-contents h4,
+.shiki-lsif .shiki-lsif-hover-contents h5,
+.shiki-lsif .shiki-lsif-hover-contents h6 {
+  line-height: 1.1;
+}
+
+.shiki-lsif .shiki-lsif-hover-contents p:first-child,
+.shiki-lsif .shiki-lsif-hover-contents pre:first-child,
+.shiki-lsif .shiki-lsif-hover-contents ul:first-child {
+  margin-top: 0;
+}
+
+.shiki-lsif .shiki-lsif-hover-contents p:last-child,
+.shiki-lsif .shiki-lsif-hover-contents pre:last-child,
+.shiki-lsif .shiki-lsif-hover-contents ul:last-child {
+  margin-bottom: 0;
+}
+
+.shiki-lsif .shiki-lsif-hover-contents pre {
+  text-wrap: wrap;
+}
+
+.shiki-lsif .shiki-lsif-hover-contents ul {
+  padding-left: 20px;
+}
+.shiki-lsif .shiki-lsif-hover-contents ol {
+  padding-left: 20px;
+}
+
+.shiki-lsif .shiki-lsif-hover-contents li > p {
+  margin-bottom: 0;
+}
+
+.shiki-lsif .shiki-lsif-hover-contents li > ul {
+  margin-top: 0;
+}
+</style>
+  <style>
+.line-number {
+  width: 1.5em;
+  margin-right: 1.5em;
+  display: inline-block;
+  text-align: right;
+  color: #6e7681;
+}
+</style>
+</head>
+<body>
+  <pre class="shiki shiki-themes light-plus dark-plus shiki-lsif lsp" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><a class="line-number" id="1">1</a><span style="color:#008000;--shiki-dark:#6A9955">// Copyright 2025 International Digital Economy Academy</span></span>
+<span class="line"><a class="line-number" id="2">2</a><span style="color:#008000;--shiki-dark:#6A9955">//</span></span>
+<span class="line"><a class="line-number" id="3">3</a><span style="color:#008000;--shiki-dark:#6A9955">// Licensed under the Apache License, Version 2.0 (the "License");</span></span>
+<span class="line"><a class="line-number" id="4">4</a><span style="color:#008000;--shiki-dark:#6A9955">// you may not use this file except in compliance with the License.</span></span>
+<span class="line"><a class="line-number" id="5">5</a><span style="color:#008000;--shiki-dark:#6A9955">// You may obtain a copy of the License at</span></span>
+<span class="line"><a class="line-number" id="6">6</a><span style="color:#008000;--shiki-dark:#6A9955">//</span></span>
+<span class="line"><a class="line-number" id="7">7</a><span style="color:#008000;--shiki-dark:#6A9955">//     http://www.apache.org/licenses/LICENSE-2.0</span></span>
+<span class="line"><a class="line-number" id="8">8</a><span style="color:#008000;--shiki-dark:#6A9955">//</span></span>
+<span class="line"><a class="line-number" id="9">9</a><span style="color:#008000;--shiki-dark:#6A9955">// Unless required by applicable law or agreed to in writing, software</span></span>
+<span class="line"><a class="line-number" id="10">10</a><span style="color:#008000;--shiki-dark:#6A9955">// distributed under the License is distributed on an "AS IS" BASIS,</span></span>
+<span class="line"><a class="line-number" id="11">11</a><span style="color:#008000;--shiki-dark:#6A9955">// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></span>
+<span class="line"><a class="line-number" id="12">12</a><span style="color:#008000;--shiki-dark:#6A9955">// See the License for the specific language governing permissions and</span></span>
+<span class="line"><a class="line-number" id="13">13</a><span style="color:#008000;--shiki-dark:#6A9955">// limitations under the License.</span></span>
+<span class="line"><a class="line-number" id="14">14</a></span>
+<span class="line"><a class="line-number" id="15">15</a><span style="color:#008000;--shiki-dark:#6A9955">///|</span></span>
+<span class="line"><a class="line-number" id="16">16</a><span style="color:#0000FF;--shiki-dark:#569CD6">priv</span><span style="color:#0000FF;--shiki-dark:#569CD6"> struct</span><span style="color:#267F99;--shiki-dark:#4EC9B0"> Cont</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">] {</span></span>
+<span class="line"><a class="line-number" id="17">17</a><span style="color:#001080;--shiki-dark:#9CDCFE">  </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span></span></code></pre></div><span style="color:#001080;--shiki-dark:#9CDCFE">content</span></span><span style="color:#000000;--shiki-dark:#D4D4D4"> : </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><p>type parameter A</p></div><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span></span></span>
+<span class="line"><a class="line-number" id="18">18</a><span style="color:#0000FF;--shiki-dark:#569CD6">  mut</span><span style="color:#001080;--shiki-dark:#9CDCFE"> </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">]</span></span></code></pre></div><span style="color:#001080;--shiki-dark:#9CDCFE">next</span></span><span style="color:#000000;--shiki-dark:#D4D4D4"> : </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#0000FF;--shiki-dark:#569CD6">enum</span><span style="color:#267F99;--shiki-dark:#4EC9B0"> Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">] {</span></span>
+<span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">  Nil</span></span>
+<span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">  Cons</span><span style="color:#000000;--shiki-dark:#D4D4D4">(</span><span style="color:#267F99;--shiki-dark:#4EC9B0">Cont</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">])</span></span>
+<span class="line"><span style="color:#000000;--shiki-dark:#D4D4D4">}</span></span></code></pre></div><span style="color:#267F99;--shiki-dark:#4EC9B0">Cell</span></span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><p>type parameter A</p></div><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span></span><span style="color:#000000;--shiki-dark:#D4D4D4">]</span></span>
+<span class="line"><a class="line-number" id="19">19</a><span style="color:#000000;--shiki-dark:#D4D4D4">}</span></span>
+<span class="line"><a class="line-number" id="20">20</a></span>
+<span class="line"><a class="line-number" id="21">21</a><span style="color:#008000;--shiki-dark:#6A9955">///|</span></span>
+<span class="line"><a class="line-number" id="22">22</a><span style="color:#0000FF;--shiki-dark:#569CD6">priv</span><span style="color:#0000FF;--shiki-dark:#569CD6"> enum</span><span style="color:#267F99;--shiki-dark:#4EC9B0"> Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">] {</span></span>
+<span class="line"><a class="line-number" id="23">23</a><span style="color:#267F99;--shiki-dark:#4EC9B0">  </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">]</span></span></code></pre></div><span style="color:#267F99;--shiki-dark:#4EC9B0">Nil</span></span></span>
+<span class="line"><a class="line-number" id="24">24</a><span style="color:#267F99;--shiki-dark:#4EC9B0">  </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#000000;--shiki-dark:#D4D4D4">(</span><span style="color:#267F99;--shiki-dark:#4EC9B0">Cont</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">]) </span><span style="color:#0000FF;--shiki-dark:#569CD6">-></span><span style="color:#267F99;--shiki-dark:#4EC9B0"> Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">]</span></span></code></pre></div><span style="color:#267F99;--shiki-dark:#4EC9B0">Cons</span></span><span style="color:#000000;--shiki-dark:#D4D4D4">(</span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#0000FF;--shiki-dark:#569CD6">struct</span><span style="color:#267F99;--shiki-dark:#4EC9B0"> Cont</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">] {</span></span>
+<span class="line"><span style="color:#001080;--shiki-dark:#9CDCFE">  content</span><span style="color:#000000;--shiki-dark:#D4D4D4">: </span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span></span>
+<span class="line"><span style="color:#0000FF;--shiki-dark:#569CD6">  mut</span><span style="color:#001080;--shiki-dark:#9CDCFE"> next</span><span style="color:#000000;--shiki-dark:#D4D4D4">: </span><span style="color:#267F99;--shiki-dark:#4EC9B0">Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">]</span></span>
+<span class="line"><span style="color:#000000;--shiki-dark:#D4D4D4">}</span></span></code></pre></div><span style="color:#267F99;--shiki-dark:#4EC9B0">Cont</span></span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><p>type parameter A</p></div><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span></span><span style="color:#000000;--shiki-dark:#D4D4D4">])</span></span>
+<span class="line"><a class="line-number" id="25">25</a><span style="color:#000000;--shiki-dark:#D4D4D4">}</span></span>
+<span class="line"><a class="line-number" id="26">26</a></span>
+<span class="line"><a class="line-number" id="27">27</a><span style="color:#008000;--shiki-dark:#6A9955">///|</span></span>
+<span class="line"><a class="line-number" id="28">28</a><span style="color:#0000FF;--shiki-dark:#569CD6">struct</span><span style="color:#267F99;--shiki-dark:#4EC9B0"> T</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">] {</span></span>
+<span class="line"><a class="line-number" id="29">29</a><span style="color:#0000FF;--shiki-dark:#569CD6">  mut</span><span style="color:#001080;--shiki-dark:#9CDCFE"> </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">Int</span></span></code></pre></div><span style="color:#001080;--shiki-dark:#9CDCFE">length</span></span><span style="color:#000000;--shiki-dark:#D4D4D4"> : </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">Int</span></span></code></pre></div><span style="color:#267F99;--shiki-dark:#4EC9B0">Int</span></span></span>
+<span class="line"><a class="line-number" id="30">30</a><span style="color:#0000FF;--shiki-dark:#569CD6">  mut</span><span style="color:#001080;--shiki-dark:#9CDCFE"> </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">]</span></span></code></pre></div><span style="color:#001080;--shiki-dark:#9CDCFE">first</span></span><span style="color:#000000;--shiki-dark:#D4D4D4"> : </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#0000FF;--shiki-dark:#569CD6">enum</span><span style="color:#267F99;--shiki-dark:#4EC9B0"> Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">] {</span></span>
+<span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">  Nil</span></span>
+<span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">  Cons</span><span style="color:#000000;--shiki-dark:#D4D4D4">(</span><span style="color:#267F99;--shiki-dark:#4EC9B0">Cont</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">])</span></span>
+<span class="line"><span style="color:#000000;--shiki-dark:#D4D4D4">}</span></span></code></pre></div><span style="color:#267F99;--shiki-dark:#4EC9B0">Cell</span></span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><p>type parameter A</p></div><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span></span><span style="color:#000000;--shiki-dark:#D4D4D4">]</span></span>
+<span class="line"><a class="line-number" id="31">31</a><span style="color:#0000FF;--shiki-dark:#569CD6">  mut</span><span style="color:#001080;--shiki-dark:#9CDCFE"> </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">]</span></span></code></pre></div><span style="color:#001080;--shiki-dark:#9CDCFE">last</span></span><span style="color:#000000;--shiki-dark:#D4D4D4"> : </span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><pre class="shiki shiki-themes light-plus dark-plus" style="background-color:#FFFFFF;--shiki-dark-bg:#1E1E1E;color:#000000;--shiki-dark:#D4D4D4" tabindex="0"><code><span class="line"><span style="color:#0000FF;--shiki-dark:#569CD6">enum</span><span style="color:#267F99;--shiki-dark:#4EC9B0"> Cell</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">] {</span></span>
+<span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">  Nil</span></span>
+<span class="line"><span style="color:#267F99;--shiki-dark:#4EC9B0">  Cons</span><span style="color:#000000;--shiki-dark:#D4D4D4">(</span><span style="color:#267F99;--shiki-dark:#4EC9B0">Cont</span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span><span style="color:#000000;--shiki-dark:#D4D4D4">])</span></span>
+<span class="line"><span style="color:#000000;--shiki-dark:#D4D4D4">}</span></span></code></pre></div><span style="color:#267F99;--shiki-dark:#4EC9B0">Cell</span></span><span style="color:#000000;--shiki-dark:#D4D4D4">[</span><span class="shiki-lsif-hover"><div class="shiki-lsif-hover-contents"><p>type parameter A</p></div><span style="color:#267F99;--shiki-dark:#4EC9B0">A</span></span><span style="color:#000000;--shiki-dark:#D4D4D4">]</span></span>
+<span class="line"><a class="line-number" id="32">32</a><span style="color:#000000;--shiki-dark:#D4D4D4">}</span></span>
+<span class="line"><a class="line-number" id="33">33</a></span></code></pre>
+</body>
+</html>
